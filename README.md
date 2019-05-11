@@ -77,3 +77,5 @@ When task is executed, gulp starts local web server BrowserSync and opens index.
 [About BrowserSync](http://www.browsersync.io/)  
 
 Server uses `dist/` as a project root.
+
+df
