@@ -15,103 +15,115 @@ h1 {
   src: url(../fonts/Avenir/Avenir-Black.ttf);
   /* Путь к файлу со шрифтом */ }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: Avenir, sans-serif; }
+  font-family: Avenir; }
 
-.header_big_logo_container {
-  position: relative; }
-
-.header_logo_img {
-  left: 0;
-  right: 0;
-  width: 100%; }
-
-.header_menu_container {
+.header-container {
+  position: relative;
   height: 60px;
-  background: white;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 0px #E1E7ED;
+          box-shadow: 0px 1px 0px #E1E7ED; }
+  .header-container .logo {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 26px;
+    top: 25%;
+    bottom: 25%; }
+  .header-container .profile {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 19px;
+    top: 25%;
+    bottom: 25%; }
+  .header-container .nav-wrap {
+    width: 337px;
+    height: 22px;
+    position: absolute;
+    right: 86px;
+    top: 21px;
+    bottom: 17px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .header-container .nav-wrap .nav-item {
+      list-style: none;
+      text-decoration: none;
+      display: inline; }
+      .header-container .nav-wrap .nav-item a {
+        font-size: 16px;
+        line-height: 22px;
+        color: #3D4E61;
+        text-decoration: none;
+        margin-right: 30px; }
 
-.header_right_menu_container {
-  margin-right: 19px;
+main .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: flex; }
+  main .main-container .main-info-block {
+    width: 901px;
+    height: 1266px;
+    margin: 39px auto 75px; }
 
-.header_small_logo_img {
-  width: 30px;
-  height: 30px;
-  margin-left: 26px; }
-
-.header_user_logo_container {
+footer {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px -1px 0px #E1E7ED;
+          box-shadow: 0px -1px 0px #E1E7ED;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center; }
-
-.header_user_logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%; }
-
-.header_menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.header_menu > span {
-  margin-right: 30px;
-  margin-left: 30px;
-  font-size: 16px;
-  line-height: 19px;
-  color: #3d4e61; }
-
-article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  display: flex; }
+  footer .footer-container {
+    margin: 44px auto;
+    display: grid;
+    width: 901px;
+    grid-template-columns: repeat(3, auto);
+    font-size: 16px;
+    line-height: 19px;
+    color: #3D4E61; }
+    footer .footer-container .Airbnb-column .Airbnb {
+      margin-bottom: 20px; }
+      footer .footer-container .Airbnb-column .Airbnb a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3D4E61; }
+    footer .footer-container .Airbnb-column .footer-item {
+      margin-top: 10px; }
+      footer .footer-container .Airbnb-column .footer-item a {
+        text-decoration: none;
+        color: #3D4E61; }
+    footer .footer-container .Discover-column .Discover {
+      margin-bottom: 20px; }
+      footer .footer-container .Discover-column .Discover a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3D4E61; }
+    footer .footer-container .Discover-column .footer-item {
+      margin-top: 10px; }
+      footer .footer-container .Discover-column .footer-item a {
+        text-decoration: none;
+        color: #3D4E61; }
+    footer .footer-container .Hosting-column .Hosting {
+      margin-bottom: 20px; }
+      footer .footer-container .Hosting-column .Hosting a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3D4E61; }
+    footer .footer-container .Hosting-column .footer-item {
+      margin-top: 10px; }
+      footer .footer-container .Hosting-column .footer-item a {
+        text-decoration: none;
+        color: #3D4E61; }
 
 /*# sourceMappingURL=main.css.map */

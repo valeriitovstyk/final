@@ -6,35 +6,128 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-
-<header>
-  <div class="header_menu_container">
-    <div class="header_left_small_logo_container">
-      <img src="images/header_small_logo.png" class="header_small_logo_img">
+<header class="header-container">
+  <a href="#" title="Home">
+    <img src="images/header_small_logo.png" alt="logo" class="logo">
+  </a>
+  <nav class="nav-wrap">
+    <div class="nav-item">
+      <a href="#">Become a host</a>
     </div>
-    <div class="header_right_menu_container">
-      <div class="header_menu">
-        <span>Become a host</span>
-        <span>Trips</span>
-        <span>Messages</span>
-      </div>
-      <div class="header_user_logo_container">
-        <img src="images/header_user_logo.png" class="header_user_logo">
-      </div>
-
+    <div class="nav-item">
+      <a href="#">Trips</a>
     </div>
-
-  </div>
-  <div class="header_big_logo_container">
-    <img src="images/header_big_logo_home.png" class="header_logo_img">
-  </div>
+    <div class="nav-item">
+      <a href="#">Messages</a>
+    </div>
+  </nav>
+  <a href="#" title="Profile">
+    <img src="images/header_user_logo.png" alt="profile" class="profile">
+  </a>
 </header>
-<article>
-  <div class="main_description">testretgwergrtretretertertert</div>
-  <div class="main_reviews"></div>
-  <div class="main_hosts"></div>
-</article>
-<footer>footer</footer>
+
+<main>
+  <a href="#" title="Home-foto">
+    <img src="images/header_big_logo_home.png" alt="Home-foto" class="Home-foto">
+  </a>
+  <div class="main-container">
+    <div class="main-info-block">
+      <div class="apartment-info">
+        <h1>Quiet apartment</h1>
+        <p>Entire apartment</p>
+        <div class="apartment-info-parametres">
+          <p>4 guests</p>
+          <p>1 bed</p>
+          <p>1 bath</p>
+        </div>
+        <p class="location">City Apartment is newly renovated in the heart of Budapest,
+          right in the city center. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <div class="contact-host"><a href="#">Contact host</a></div>
+        <div class="apartment-amenities">
+          <p>Amenities</p>
+          <div class="amenities-list-container">
+            <div class="amenities-list-container-col1">
+              <p>Elevator</p>
+              <p>Washer</p>
+            </div>
+            <div class="amenities-list-container-col2">
+              <p>Hair dryer</p>
+              <p>Kitchen</p>
+            </div>
+          </div>
+          <div class="show-all"><a href="#">Show All Amenities</a></div>
+        </div>
+      </div>
+
+      <div class="booking-info">
+        <p>25$ per night</p>
+        <div>
+          <input type="date" name="date" id="date" value="Date">
+        </div>
+        <div>
+          <input type="number" name="guests" id="guests" placeholder="Guests">
+        </div>
+        <button class="book">Book</button>
+
+      </div>
+      <div class="review-info">
+        <h2>Reviews</h2>
+        <div class="review-block1">
+          <a href="#" title="profile-photo">
+            <img src="images/Ellipses.png" alt="profile-photo" class="profile-photo">
+          </a>
+          <p class="review-name">John</p>
+          <p class="review-date">September 2016</p>
+          <p class="review-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam.</p>
+        </div>
+        <div class="review-block2">
+          <a href="#" title="profile-photo">
+            <img src="images/Ellipses.png" alt="profile-photo" class="profile-photo">
+          </a>
+          <p class="review-name">John</p>
+          <p class="review-date">September 2016</p>
+          <p class="review-post">Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+      </div>
+
+      <div class="hosted-info">
+        <h2>Hosted by Jane</h2>
+        <p class="host-location">Budapest, Hungary</p>
+        <p class="host-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et magna aliqua.</p>
+        <button class="contact-host">Contact Host</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <section class="Airbnb-column">
+      <div class="Airbnb"><a href="#">Airbnb</a></div>
+      <div class="footer-item"><a href="#">About</a></div>
+      <div class="footer-item"><a href="#">Press</a></div>
+      <div class="footer-item"><a href="#">Help</a></div>
+    </section>
+    <section class="Discover-column">
+      <div class="Discover"><a href="#">Discover</a></div>
+      <div class="footer-item"><a href="#">Travel credit</a></div>
+      <div class="footer-item"><a href="#">Business</a></div>
+      <div class="footer-item"><a href="#">Guidebooks</a></div>
+    </section>
+    <section class="Hosting-column">
+      <div class="Hosting"><a href="#">Hosting</a></div>
+      <div class="footer-item"><a href="#">Why host</a></div>
+      <div class="footer-item"><a href="#">Hospitality</a></div>
+      <div class="footer-item"><a href="#">Community</a></div>
+    </section>
+  </div>
+</footer>
 <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
