@@ -68,14 +68,38 @@ html, body {
 }
 
 main {
-
+  a {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
   .main-container {
     display: flex;
     .main-info-block {
       width: 901px;
       height: 1266px;
       margin: 39px auto 75px;
-
+      .apartment-info {
+        h1 {
+          font-size: 36px;
+          line-height: 42px;
+          color: #3D4E61;
+        }
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          color: #687C94;
+        }
+        .apartment-info-parametres {
+          p {
+            font-size: 16px;
+            line-height: 19px;
+            color: #3D4E61;
+            display: inline;
+            margin-right: 25px;
+          }
+        }
+      }
     }
   }
 }

@@ -68,6 +68,11 @@ html, body {
         text-decoration: none;
         margin-right: 30px; }
 
+main a {
+  width: 100%;
+  left: 0;
+  right: 0; }
+
 main .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +81,20 @@ main .main-container {
     width: 901px;
     height: 1266px;
     margin: 39px auto 75px; }
+    main .main-container .main-info-block .apartment-info h1 {
+      font-size: 36px;
+      line-height: 42px;
+      color: #3D4E61; }
+    main .main-container .main-info-block .apartment-info p {
+      font-size: 16px;
+      line-height: 19px;
+      color: #687C94; }
+    main .main-container .main-info-block .apartment-info .apartment-info-parametres p {
+      font-size: 16px;
+      line-height: 19px;
+      color: #3D4E61;
+      display: inline;
+      margin-right: 25px; }
 
 footer {
   background: #FFFFFF;
