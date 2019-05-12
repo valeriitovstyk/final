@@ -2,6 +2,150 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
+@font-face {
+  font-family: Avenir; /* Имя шрифта */
+  src: url(../fonts/Avenir/Avenir-Black.ttf); /* Путь к файлу со шрифтом */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir;
+}
+
+.header-container {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 0px #E1E7ED;
+  .logo {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 26px;
+    top: 25%;
+    bottom: 25%;
+  }
+
+  .profile {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+
+    right: 19px;
+    top: 25%;
+    bottom: 25%;
+  }
+
+  .nav-wrap {
+    width: 337px;
+    height: 22px;
+    position: absolute;
+    right: 86px;
+    top: 21px;
+    bottom: 17px;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-item {
+      list-style: none;
+      text-decoration: none;
+      display: inline;
+
+      a {
+        font-size: 16px;
+        line-height: 22px;
+        color: #3D4E61;
+        text-decoration: none;
+        margin-right: 30px;
+
+
+      }
+    }
+  }
+}
+
+main {
+
+  .main-container {
+    display: flex;
+    .main-info-block {
+      width: 901px;
+      height: 1266px;
+      margin: 39px auto 75px;
+
+    }
+  }
+}
+
+footer {
+  background: #FFFFFF;
+  box-shadow: 0px -1px 0px #E1E7ED;
+  display: flex;
+
+  .footer-container {
+    margin: 44px auto;
+    display: grid;
+    width: 901px;
+    grid-template-columns: repeat(3, auto);
+    font-size: 16px;
+    line-height: 19px;
+    color: #3D4E61;
+
+    .Airbnb-column {
+      .Airbnb {
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #3D4E61;
+        }
+      }
+      .footer-item {
+        margin-top: 10px;
+        a {
+          text-decoration: none;
+          color: #3D4E61;
+        }
+      }
+    }
+
+    .Discover-column {
+      .Discover {
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #3D4E61;
+        }
+      }
+      .footer-item {
+        margin-top: 10px;
+        a {
+          text-decoration: none;
+          color: #3D4E61;
+        }
+      }
+    }
+
+    .Hosting-column {
+      .Hosting {
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #3D4E61;
+        }
+      }
+      .footer-item {
+        margin-top: 10px;
+        a {
+          text-decoration: none;
+          color: #3D4E61;
+        }
+      }
+    }
+  }
 }
