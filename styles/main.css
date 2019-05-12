@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
@@ -8,7 +9,121 @@ h1 {
   font-weight: normal;
   font-style: normal; }
 
-body {
-  background: #eee; }
+@font-face {
+  font-family: Avenir;
+  /* Имя шрифта */
+  src: url(../fonts/Avenir/Avenir-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir; }
+
+.header-container {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 0px #E1E7ED;
+          box-shadow: 0px 1px 0px #E1E7ED; }
+  .header-container .logo {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 26px;
+    top: 25%;
+    bottom: 25%; }
+  .header-container .profile {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 19px;
+    top: 25%;
+    bottom: 25%; }
+  .header-container .nav-wrap {
+    width: 337px;
+    height: 22px;
+    position: absolute;
+    right: 86px;
+    top: 21px;
+    bottom: 17px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .header-container .nav-wrap .nav-item {
+      list-style: none;
+      text-decoration: none;
+      display: inline; }
+      .header-container .nav-wrap .nav-item a {
+        font-size: 16px;
+        line-height: 22px;
+        color: #3D4E61;
+        text-decoration: none;
+        margin-right: 30px; }
+
+main .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  main .main-container .main-info-block {
+    width: 901px;
+    height: 1266px;
+    margin: 39px auto 75px; }
+
+footer {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px -1px 0px #E1E7ED;
+          box-shadow: 0px -1px 0px #E1E7ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  footer .footer-container {
+    margin: 44px auto;
+    display: grid;
+    width: 901px;
+    grid-template-columns: repeat(3, auto);
+    font-size: 16px;
+    line-height: 19px;
+    color: #3D4E61; }
+    footer .footer-container .Airbnb-column .Airbnb {
+      margin-bottom: 20px; }
+      footer .footer-container .Airbnb-column .Airbnb a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3D4E61; }
+    footer .footer-container .Airbnb-column .footer-item {
+      margin-top: 10px; }
+      footer .footer-container .Airbnb-column .footer-item a {
+        text-decoration: none;
+        color: #3D4E61; }
+    footer .footer-container .Discover-column .Discover {
+      margin-bottom: 20px; }
+      footer .footer-container .Discover-column .Discover a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3D4E61; }
+    footer .footer-container .Discover-column .footer-item {
+      margin-top: 10px; }
+      footer .footer-container .Discover-column .footer-item a {
+        text-decoration: none;
+        color: #3D4E61; }
+    footer .footer-container .Hosting-column .Hosting {
+      margin-bottom: 20px; }
+      footer .footer-container .Hosting-column .Hosting a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #3D4E61; }
+    footer .footer-container .Hosting-column .footer-item {
+      margin-top: 10px; }
+      footer .footer-container .Hosting-column .footer-item a {
+        text-decoration: none;
+        color: #3D4E61; }
 
 /*# sourceMappingURL=main.css.map */
