@@ -7,61 +7,84 @@
   src: url(../fonts/Avenir/Avenir-Black.ttf); /* Путь к файлу со шрифтом */
 }
 
-html, body {
+$small_img_size: 30px;
+@mixin small_img_block($small_img_size) {
+  width: $small_img_size;
+  height: $small_img_size;
+}
+
+@mixin flex_row_between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+@mixin align_items_center {
+  justify-items: center;
+  align-items: center;
+}
+
+$grey-title: #3d4e61;
+$light-grey-title: #687c94;
+$light-green-title: #118488;
+$light-grey-border: #e1e7ed;
+
+body {
   margin: 0;
   padding: 0;
-  font-family: Avenir;
+  display: flex;
+  flex-direction: column;
+  font-family: Avenir, sans-serif;
 }
 
 .header-container {
-  position: relative;
   height: 60px;
-  width: 100%;
-  display: flex;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 0px #E1E7ED;
-  .logo {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 26px;
-    top: 25%;
-    bottom: 25%;
+  background: white;
+  @include flex_row_between;
+  @include align_items_center;
+
+  .header-left {
+    padding-left: 26px;
+
+    .header-small-logo-img {
+      @include small_img_block($small_img_size);
+    }
   }
 
-  .profile {
-    width: 30px;
-    height: 30px;
-    position: absolute;
+  .header-right {
+    margin-right: 19px;
+    @include flex_row_between;
 
-    right: 19px;
-    top: 25%;
-    bottom: 25%;
-  }
+    .header-nav-wrapper {
+      @include flex_row_between;
+      @include align_items_center;
 
-  .nav-wrap {
-    width: 337px;
-    height: 22px;
-    position: absolute;
-    right: 86px;
-    top: 21px;
-    bottom: 17px;
-    align-items: center;
-    justify-content: space-between;
+      .nav-wrap {
+        .nav-item {
+          list-style: none;
+          text-decoration: none;
+          display: inline;
 
-    .nav-item {
-      list-style: none;
-      text-decoration: none;
-      display: inline;
+          a {
+            font-size: 16px;
+            line-height: 22px;
+            color: $grey-title;
+            text-decoration: none;
+            margin-right: 30px;
+          }
+        }
+      }
+    }
 
-      a {
-        font-size: 16px;
-        line-height: 22px;
-        color: #3D4E61;
-        text-decoration: none;
-        margin-right: 30px;
+    .header-profile-wrapper {
+      display: flex;
+      justify-content: center;
+      align-content: center;
 
-
+      .header-logo {
+        @include small_img_block($small_img_size);
+        border-radius: 50%;
       }
     }
   }
@@ -69,35 +92,281 @@ html, body {
 
 main {
   a {
-    width: 100%;
-    left: 0;
-    right: 0;
+    img.Home-foto {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
   }
-  .main-container {
+
+  div.main-container {
     display: flex;
-    .main-info-block {
+    font-family: Avenir, sans-serif;
+
+    div.main-info-block {
+      position: relative;
       width: 901px;
       height: 1266px;
       margin: 39px auto 75px;
-      .apartment-info {
+
+      div.apartment-info {
         h1 {
           font-size: 36px;
           line-height: 42px;
-          color: #3D4E61;
+          color: $grey-title;
+          margin-top: 0;
         }
+
         p {
           font-size: 16px;
           line-height: 19px;
-          color: #687C94;
+          color: $light-grey-title;
         }
-        .apartment-info-parametres {
+
+        div.apartment-info-parametres {
+          margin-top: 15px;
+
           p {
             font-size: 16px;
             line-height: 19px;
-            color: #3D4E61;
             display: inline;
             margin-right: 25px;
+            color: $grey-title;
           }
+        }
+
+        div.location {
+          p.location-text {
+            width: 492px;
+            height: 120px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $grey-title;
+          }
+        }
+
+        div.contact-host {
+          margin-top: 5px;
+          margin-bottom: 30px;
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: bold;
+            color: $grey-title;
+
+          }
+        }
+
+        div.apartment-amenities {
+          h2 {
+            font-size: 20px;
+            line-height: 23px;
+            color: $grey-title;
+          }
+
+          div.amenities-list-container {
+            display: grid;
+            width: 354px;
+            grid-template-columns: repeat(2, auto);
+            grid-column-gap: 20px;
+
+            div.amenities-list-container-col1,
+            div.amenities-list-container-col2 {
+              p {
+                font-size: 16px;
+                line-height: 19px;
+                color: $grey-title;
+                margin-bottom: 13px;
+              }
+            }
+          }
+
+          div.show-all {
+            margin-bottom: 66px;
+            a {
+              font-size: 16px;
+              line-height: 19px;
+              font-weight: bold;
+              color: $grey-title;
+              text-decoration: none;
+
+            }
+          }
+        }
+      }
+
+      div.booking-info {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 330px;
+        height: 319px;
+        background: white;
+        border: 1px solid $light-grey-border;
+        box-sizing: border-box;
+        border-radius: 3px;
+
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          width: 112px;
+          height: 22px;
+          color: $grey-title;
+          position: absolute;
+          left: 30px;
+          top: 30px;
+          margin: 0;
+        }
+
+        div.date {
+          position: absolute;
+          left: 30px;
+          top: 91px;
+
+          input {
+            width: 270px;
+            height: 50px;
+            background: white;
+            border: 1px solid $light-grey-border;
+            box-sizing: border-box;
+            border-radius: 3px;
+          }
+        }
+
+        div.guests {
+          position: absolute;
+          left: 30px;
+          top: 157px;
+
+          input {
+            width: 270px;
+            height: 50px;
+            background: white;
+            border: 1px solid $light-grey-border;
+            box-sizing: border-box;
+            border-radius: 3px;
+            font-size: 16px;
+            line-height: 19px;
+            color: $grey-title;
+
+          }
+        }
+
+        button.book {
+          background: #FD5C63;
+          border-radius: 4px;
+          width: 270px;
+          height: 50px;
+          position: absolute;
+          left: 30px;
+          bottom: 38px;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .review-info {
+        h2 {
+          font-size: 28px;
+          line-height: 33px;
+          color: $grey-title;
+        }
+
+        .review-block1 {
+          a {
+            img {
+              float: left;
+              margin-right: 21px;
+              margin-bottom: 23px;
+            }
+          }
+
+          p.review-name {
+            font-size: 14px;
+            line-height: 16px;
+          }
+
+          p.review-date {
+            font-size: 20px;
+            line-height: 23px;
+          }
+
+          p.review-post {
+            font-size: 16px;
+            line-height: 19px;
+            width: 491px;
+            height: 120px;
+            margin: 0;
+          }
+        }
+
+        .review-block2 {
+          a {
+            img {
+              float: left;
+              margin-right: 21px;
+              margin-bottom: 23px;
+            }
+          }
+
+          p.review-name {
+            font-size: 14px;
+            line-height: 16px;
+          }
+
+          p.review-date {
+            font-size: 20px;
+            line-height: 23px;
+          }
+
+          p.review-post {
+            font-size: 16px;
+            line-height: 19px;
+            width: 491px;
+            height: 120px;
+            margin: 0;
+          }
+        }
+      }
+
+      .hosted-info {
+        h2 {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 33px;
+          color: $grey-title;
+        }
+
+        p.host-location {
+          font-size: 14px;
+          line-height: 16px;
+          color: $grey-title;
+        }
+
+        p.host-description {
+          font-size: 16px;
+          line-height: 19px;
+          color: $grey-title;
+          width: 491px;
+          height: 120px;
+          margin: 0;
+        }
+
+        button.contact-host {
+          border: 1px solid $light-green-title;
+          box-sizing: border-box;
+          border-radius: 4px;
+          width: 150px;
+          height: 50px;
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+          color: $light-green-title;
         }
       }
     }
@@ -105,8 +374,8 @@ main {
 }
 
 footer {
-  background: #FFFFFF;
-  box-shadow: 0px -1px 0px #E1E7ED;
+  background: white;
+  box-shadow: 0px -1px 0px $light-grey-border;
   display: flex;
 
   .footer-container {
@@ -116,22 +385,25 @@ footer {
     grid-template-columns: repeat(3, auto);
     font-size: 16px;
     line-height: 19px;
-    color: #3D4E61;
+    color: $grey-title;
 
     .Airbnb-column {
       .Airbnb {
         margin-bottom: 20px;
+
         a {
           text-decoration: none;
           font-weight: bold;
-          color: #3D4E61;
+          color: $grey-title;
         }
       }
+
       .footer-item {
         margin-top: 10px;
+
         a {
           text-decoration: none;
-          color: #3D4E61;
+          color: $grey-title;
         }
       }
     }
@@ -139,17 +411,20 @@ footer {
     .Discover-column {
       .Discover {
         margin-bottom: 20px;
+
         a {
           text-decoration: none;
           font-weight: bold;
-          color: #3D4E61;
+          color: $grey-title;
         }
       }
+
       .footer-item {
         margin-top: 10px;
+
         a {
           text-decoration: none;
-          color: #3D4E61;
+          color: $grey-title;
         }
       }
     }
@@ -157,17 +432,20 @@ footer {
     .Hosting-column {
       .Hosting {
         margin-bottom: 20px;
+
         a {
           text-decoration: none;
           font-weight: bold;
-          color: #3D4E61;
+          color: $grey-title;
         }
       }
+
       .footer-item {
         margin-top: 10px;
+
         a {
           text-decoration: none;
-          color: #3D4E61;
+          color: $grey-title;
         }
       }
     }
