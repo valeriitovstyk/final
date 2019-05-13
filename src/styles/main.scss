@@ -29,6 +29,7 @@ $grey-title: #3d4e61;
 $light-grey-title: #687c94;
 $light-green-title: #118488;
 $light-grey-border: #e1e7ed;
+$red-book-btn: #fd5c63;
 
 body {
   margin: 0;
@@ -254,7 +255,7 @@ main {
         }
 
         button.book {
-          background: #FD5C63;
+          background: $red-book-btn;
           border-radius: 4px;
           width: 270px;
           height: 50px;
@@ -450,4 +451,9 @@ footer {
       }
     }
   }
+}
+
+::placeholder {
+  color: red;
+  opacity: 1;
 }
