@@ -125,7 +125,10 @@ main div.main-container div.main-info-block .review-info h2, main div.main-conta
   line-height: 33px; }
 
 main a img.Home-foto {
-  width: 100%; }
+  width: 100%;
+  height: 464px;
+  -o-object-fit: fill;
+     object-fit: fill; }
 
 main div.main-container {
   display: -webkit-box;
@@ -304,27 +307,6 @@ footer {
     grid-template-columns: repeat(3, auto);
     font-size: 16px;
     line-height: 19px;
-    color: #3d4e61;
-    /*
-    .Airbnb-column {
-      .Airbnb {
-        margin-bottom: 20px;
-      }
-
-    }
-
-    .Discover-column {
-      .Discover {
-        margin-bottom: 20px;
-      }
-
-    }
-
-    .Hosting-column {
-      .Hosting {
-        margin-bottom: 20px;
-      }
-
-    }*/ }
+    color: #3d4e61; }
 
 /*# sourceMappingURL=main.css.map */
