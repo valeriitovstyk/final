@@ -108,7 +108,7 @@ body {
         border-radius: 50%; }
 
 main div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p, main div.main-container div.main-info-block div.apartment-info div.contact-host a, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col1 p,
-main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col2 p, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a, main div.main-container div.main-info-block div.booking-info p, main div.main-container div.main-info-block div.booking-info div.guests input, main div.main-container div.main-info-block div.booking-info button.book, main div.main-container div.main-info-block .review-info .review-block1 p.review-post, main div.main-container div.main-info-block .review-info .review-block2 p.review-post, main div.main-container div.main-info-block .hosted-info p.host-description {
+main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col2 p, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a, main div.main-container div.main-info-block div.booking-info p, main div.main-container div.main-info-block div.booking-info div.date input, main div.main-container div.main-info-block div.booking-info div.guests input, main div.main-container div.main-info-block div.booking-info button.book, main div.main-container div.main-info-block .review-info .review-block1 p.review-post, main div.main-container div.main-info-block .review-info .review-block2 p.review-post, main div.main-container div.main-info-block .hosted-info p.host-description {
   font-size: 16px;
   line-height: 19px; }
 
@@ -211,7 +211,8 @@ main div.main-container {
           border: 1px solid #e1e7ed;
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
-          border-radius: 3px; }
+          border-radius: 3px;
+          padding-left: 17px; }
       main div.main-container div.main-info-block div.booking-info div.guests {
         position: absolute;
         left: 30px;
@@ -224,7 +225,8 @@ main div.main-container {
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
           border-radius: 3px;
-          color: #3d4e61; }
+          color: #3d4e61;
+          padding-left: 17px; }
       main div.main-container div.main-info-block div.booking-info button.book {
         background: #fd5c63;
         border-radius: 4px;
@@ -263,7 +265,7 @@ main div.main-container {
     main div.main-container div.main-info-block .hosted-info p.host-description {
       color: #3d4e61;
       width: 491px;
-      height: 120px;
+      height: 100px;
       margin: 0; }
     main div.main-container div.main-info-block .hosted-info button.contact-host {
       border: 1px solid #118488;
@@ -275,7 +277,8 @@ main div.main-container {
       font-size: 16px;
       line-height: 22px;
       text-align: center;
-      color: #118488; }
+      color: #118488;
+      margin-bottom: 75px; }
 
 .footer-column-item-title, .footer-column-title {
   text-decoration: none;
@@ -323,25 +326,5 @@ footer {
       }
 
     }*/ }
-
-::-webkit-input-placeholder {
-  color: red;
-  opacity: 1; }
-
-::-moz-placeholder {
-  color: red;
-  opacity: 1; }
-
-:-ms-input-placeholder {
-  color: red;
-  opacity: 1; }
-
-::-ms-input-placeholder {
-  color: red;
-  opacity: 1; }
-
-::placeholder {
-  color: red;
-  opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
