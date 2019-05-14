@@ -12,7 +12,7 @@ h1 {
 @font-face {
   font-family: Avenir;
   /* Имя шрифта */
-  src: url(../fonts/Avenir/Avenir-Black.ttf);
+  src: url(../fonts/Avenir/Avenir-Book.ttf);
   /* Путь к файлу со шрифтом */ }
 
 body {
@@ -25,7 +25,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: Avenir, sans-serif; }
+  font-family: Avenir, sans-serif;
+  color: #3d4e61; }
 
 .header-container {
   height: 60px;
@@ -106,16 +107,30 @@ body {
         height: 30px;
         border-radius: 50%; }
 
+main div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p, main div.main-container div.main-info-block div.apartment-info div.contact-host a, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col1 p,
+main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col2 p, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a, main div.main-container div.main-info-block div.booking-info p, main div.main-container div.main-info-block div.booking-info div.guests input, main div.main-container div.main-info-block div.booking-info button.book, main div.main-container div.main-info-block .review-info .review-block1 p.review-post, main div.main-container div.main-info-block .review-info .review-block2 p.review-post, main div.main-container div.main-info-block .hosted-info p.host-description {
+  font-size: 16px;
+  line-height: 19px; }
+
+main div.main-container div.main-info-block .review-info .review-block1 p.review-name, main div.main-container div.main-info-block .review-info .review-block2 p.review-name, main div.main-container div.main-info-block .hosted-info p.host-location {
+  font-size: 14px;
+  line-height: 16px; }
+
+main div.main-container div.main-info-block div.apartment-info div.apartment-amenities h2, main div.main-container div.main-info-block .review-info .review-block1 p.review-date, main div.main-container div.main-info-block .review-info .review-block2 p.review-date {
+  font-size: 20px;
+  line-height: 23px; }
+
+main div.main-container div.main-info-block .review-info h2, main div.main-container div.main-info-block .hosted-info h2 {
+  font-size: 28px;
+  line-height: 33px; }
+
 main a img.Home-foto {
-  width: 100%;
-  left: 0;
-  right: 0; }
+  width: 100%; }
 
 main div.main-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  font-family: Avenir, sans-serif; }
+  display: flex; }
   main div.main-container div.main-info-block {
     position: relative;
     width: 901px;
@@ -133,8 +148,6 @@ main div.main-container {
     main div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres {
       margin-top: 15px; }
       main div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p {
-        font-size: 16px;
-        line-height: 19px;
         display: inline;
         margin-right: 25px;
         color: #3d4e61; }
@@ -149,13 +162,9 @@ main div.main-container {
       margin-bottom: 30px; }
       main div.main-container div.main-info-block div.apartment-info div.contact-host a {
         text-decoration: none;
-        font-size: 16px;
-        line-height: 19px;
         font-weight: bold;
         color: #3d4e61; }
     main div.main-container div.main-info-block div.apartment-info div.apartment-amenities h2 {
-      font-size: 20px;
-      line-height: 23px;
       color: #3d4e61; }
     main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container {
       display: grid;
@@ -164,15 +173,11 @@ main div.main-container {
       grid-column-gap: 20px; }
       main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col1 p,
       main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col2 p {
-        font-size: 16px;
-        line-height: 19px;
         color: #3d4e61;
         margin-bottom: 13px; }
     main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all {
       margin-bottom: 66px; }
       main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a {
-        font-size: 16px;
-        line-height: 19px;
         font-weight: bold;
         color: #3d4e61;
         text-decoration: none; }
@@ -188,8 +193,6 @@ main div.main-container {
               box-sizing: border-box;
       border-radius: 3px; }
       main div.main-container div.main-info-block div.booking-info p {
-        font-size: 16px;
-        line-height: 19px;
         width: 112px;
         height: 22px;
         color: #3d4e61;
@@ -221,8 +224,6 @@ main div.main-container {
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
           border-radius: 3px;
-          font-size: 16px;
-          line-height: 19px;
           color: #3d4e61; }
       main div.main-container div.main-info-block div.booking-info button.book {
         background: #fd5c63;
@@ -232,27 +233,15 @@ main div.main-container {
         position: absolute;
         left: 30px;
         bottom: 38px;
-        font-size: 16px;
-        line-height: 19px;
         text-align: center;
         color: white; }
     main div.main-container div.main-info-block .review-info h2 {
-      font-size: 28px;
-      line-height: 33px;
       color: #3d4e61; }
     main div.main-container div.main-info-block .review-info .review-block1 a img {
       float: left;
       margin-right: 21px;
       margin-bottom: 23px; }
-    main div.main-container div.main-info-block .review-info .review-block1 p.review-name {
-      font-size: 14px;
-      line-height: 16px; }
-    main div.main-container div.main-info-block .review-info .review-block1 p.review-date {
-      font-size: 20px;
-      line-height: 23px; }
     main div.main-container div.main-info-block .review-info .review-block1 p.review-post {
-      font-size: 16px;
-      line-height: 19px;
       width: 491px;
       height: 120px;
       margin: 0; }
@@ -260,15 +249,7 @@ main div.main-container {
       float: left;
       margin-right: 21px;
       margin-bottom: 23px; }
-    main div.main-container div.main-info-block .review-info .review-block2 p.review-name {
-      font-size: 14px;
-      line-height: 16px; }
-    main div.main-container div.main-info-block .review-info .review-block2 p.review-date {
-      font-size: 20px;
-      line-height: 23px; }
     main div.main-container div.main-info-block .review-info .review-block2 p.review-post {
-      font-size: 16px;
-      line-height: 19px;
       width: 491px;
       height: 120px;
       margin: 0; }
@@ -276,16 +257,10 @@ main div.main-container {
       font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 28px;
-      line-height: 33px;
       color: #3d4e61; }
     main div.main-container div.main-info-block .hosted-info p.host-location {
-      font-size: 14px;
-      line-height: 16px;
       color: #3d4e61; }
     main div.main-container div.main-info-block .hosted-info p.host-description {
-      font-size: 16px;
-      line-height: 19px;
       color: #3d4e61;
       width: 491px;
       height: 120px;
@@ -302,10 +277,20 @@ main div.main-container {
       text-align: center;
       color: #118488; }
 
+.footer-column-item-title, .footer-column-title {
+  text-decoration: none;
+  color: #3d4e61; }
+
+.footer-column-title {
+  font-weight: bold; }
+
+.footer-item {
+  margin-top: 10px; }
+
 footer {
   background: white;
-  -webkit-box-shadow: 0px -1px 0px #e1e7ed;
-          box-shadow: 0px -1px 0px #e1e7ed;
+  -webkit-box-shadow: 0 -1px 0 #e1e7ed;
+          box-shadow: 0 -1px 0 #e1e7ed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -316,40 +301,28 @@ footer {
     grid-template-columns: repeat(3, auto);
     font-size: 16px;
     line-height: 19px;
-    color: #3d4e61; }
-    footer .footer-container .Airbnb-column .Airbnb {
-      margin-bottom: 20px; }
-      footer .footer-container .Airbnb-column .Airbnb a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #3d4e61; }
-    footer .footer-container .Airbnb-column .footer-item {
-      margin-top: 10px; }
-      footer .footer-container .Airbnb-column .footer-item a {
-        text-decoration: none;
-        color: #3d4e61; }
-    footer .footer-container .Discover-column .Discover {
-      margin-bottom: 20px; }
-      footer .footer-container .Discover-column .Discover a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #3d4e61; }
-    footer .footer-container .Discover-column .footer-item {
-      margin-top: 10px; }
-      footer .footer-container .Discover-column .footer-item a {
-        text-decoration: none;
-        color: #3d4e61; }
-    footer .footer-container .Hosting-column .Hosting {
-      margin-bottom: 20px; }
-      footer .footer-container .Hosting-column .Hosting a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #3d4e61; }
-    footer .footer-container .Hosting-column .footer-item {
-      margin-top: 10px; }
-      footer .footer-container .Hosting-column .footer-item a {
-        text-decoration: none;
-        color: #3d4e61; }
+    color: #3d4e61;
+    /*
+    .Airbnb-column {
+      .Airbnb {
+        margin-bottom: 20px;
+      }
+
+    }
+
+    .Discover-column {
+      .Discover {
+        margin-bottom: 20px;
+      }
+
+    }
+
+    .Hosting-column {
+      .Hosting {
+        margin-bottom: 20px;
+      }
+
+    }*/ }
 
 ::-webkit-input-placeholder {
   color: red;
