@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: Avenir; /* Имя шрифта */
-  src: url(../fonts/Avenir/Avenir-Black.ttf); /* Путь к файлу со шрифтом */
+  src: url(../fonts/Avenir/Avenir-Book.ttf); /* Путь к файлу со шрифтом */
 }
 
 $small_img_size: 30px;
@@ -37,6 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Avenir, sans-serif;
+  color: $grey-title;
 }
 
 .header-container {
@@ -91,18 +92,33 @@ body {
   }
 }
 
+%main_fontsize_medium {
+  font-size: 16px;
+  line-height: 19px;
+}
+%main_fontsize_small {
+  font-size: 14px;
+  line-height: 16px;
+}
+%main_fontsize_large {
+  font-size: 20px;
+  line-height: 23px;
+}
+%main_fontsize_xl {
+  font-size: 28px;
+  line-height: 33px;
+}
+
 main {
+
   a {
     img.Home-foto {
       width: 100%;
-      left: 0;
-      right: 0;
     }
   }
 
   div.main-container {
     display: flex;
-    font-family: Avenir, sans-serif;
 
     div.main-info-block {
       position: relative;
@@ -128,8 +144,7 @@ main {
           margin-top: 15px;
 
           p {
-            font-size: 16px;
-            line-height: 19px;
+            @extend %main_fontsize_medium;
             display: inline;
             margin-right: 25px;
             color: $grey-title;
@@ -151,8 +166,7 @@ main {
           margin-bottom: 30px;
           a {
             text-decoration: none;
-            font-size: 16px;
-            line-height: 19px;
+            @extend %main_fontsize_medium;
             font-weight: bold;
             color: $grey-title;
 
@@ -161,8 +175,7 @@ main {
 
         div.apartment-amenities {
           h2 {
-            font-size: 20px;
-            line-height: 23px;
+            @extend %main_fontsize_large;
             color: $grey-title;
           }
 
@@ -175,8 +188,7 @@ main {
             div.amenities-list-container-col1,
             div.amenities-list-container-col2 {
               p {
-                font-size: 16px;
-                line-height: 19px;
+                @extend %main_fontsize_medium;;
                 color: $grey-title;
                 margin-bottom: 13px;
               }
@@ -186,8 +198,7 @@ main {
           div.show-all {
             margin-bottom: 66px;
             a {
-              font-size: 16px;
-              line-height: 19px;
+              @extend %main_fontsize_medium;;
               font-weight: bold;
               color: $grey-title;
               text-decoration: none;
@@ -209,8 +220,7 @@ main {
         border-radius: 3px;
 
         p {
-          font-size: 16px;
-          line-height: 19px;
+          @extend %main_fontsize_medium;;
           width: 112px;
           height: 22px;
           color: $grey-title;
@@ -247,8 +257,7 @@ main {
             border: 1px solid $light-grey-border;
             box-sizing: border-box;
             border-radius: 3px;
-            font-size: 16px;
-            line-height: 19px;
+            @extend %main_fontsize_medium;
             color: $grey-title;
 
           }
@@ -262,8 +271,7 @@ main {
           position: absolute;
           left: 30px;
           bottom: 38px;
-          font-size: 16px;
-          line-height: 19px;
+          @extend %main_fontsize_medium;
           text-align: center;
           color: white;
         }
@@ -271,8 +279,7 @@ main {
 
       .review-info {
         h2 {
-          font-size: 28px;
-          line-height: 33px;
+          @extend %main_fontsize_xl;
           color: $grey-title;
         }
 
@@ -286,18 +293,16 @@ main {
           }
 
           p.review-name {
-            font-size: 14px;
-            line-height: 16px;
+            @extend %main_fontsize_small;
+
           }
 
           p.review-date {
-            font-size: 20px;
-            line-height: 23px;
+            @extend %main_fontsize_large;
           }
 
           p.review-post {
-            font-size: 16px;
-            line-height: 19px;
+            @extend %main_fontsize_medium;
             width: 491px;
             height: 120px;
             margin: 0;
@@ -314,18 +319,15 @@ main {
           }
 
           p.review-name {
-            font-size: 14px;
-            line-height: 16px;
+            @extend %main_fontsize_small;
           }
 
           p.review-date {
-            font-size: 20px;
-            line-height: 23px;
+            @extend %main_fontsize_large;
           }
 
           p.review-post {
-            font-size: 16px;
-            line-height: 19px;
+            @extend %main_fontsize_medium;
             width: 491px;
             height: 120px;
             margin: 0;
@@ -338,20 +340,17 @@ main {
           font-family: "Roboto", sans-serif;
           font-style: normal;
           font-weight: bold;
-          font-size: 28px;
-          line-height: 33px;
+          @extend %main_fontsize_xl;
           color: $grey-title;
         }
 
         p.host-location {
-          font-size: 14px;
-          line-height: 16px;
+          @extend %main_fontsize_small;
           color: $grey-title;
         }
 
         p.host-description {
-          font-size: 16px;
-          line-height: 19px;
+          @extend %main_fontsize_medium;
           color: $grey-title;
           width: 491px;
           height: 120px;
@@ -374,9 +373,27 @@ main {
   }
 }
 
+%footer_column_link {
+  text-decoration: none;
+  color: $grey-title;
+}
+
+.footer-column-item-title {
+  @extend %footer_column_link;
+}
+
+.footer-column-title {
+  @extend %footer_column_link;
+  font-weight: bold;
+}
+
+.footer-item {
+  margin-top: 10px;
+}
+
 footer {
   background: white;
-  box-shadow: 0px -1px 0px $light-grey-border;
+  box-shadow: 0 -1px 0 $light-grey-border;
   display: flex;
 
   .footer-container {
@@ -387,69 +404,27 @@ footer {
     font-size: 16px;
     line-height: 19px;
     color: $grey-title;
-
+/*
     .Airbnb-column {
       .Airbnb {
         margin-bottom: 20px;
-
-        a {
-          text-decoration: none;
-          font-weight: bold;
-          color: $grey-title;
-        }
       }
 
-      .footer-item {
-        margin-top: 10px;
-
-        a {
-          text-decoration: none;
-          color: $grey-title;
-        }
-      }
     }
 
     .Discover-column {
       .Discover {
         margin-bottom: 20px;
-
-        a {
-          text-decoration: none;
-          font-weight: bold;
-          color: $grey-title;
-        }
       }
 
-      .footer-item {
-        margin-top: 10px;
-
-        a {
-          text-decoration: none;
-          color: $grey-title;
-        }
-      }
     }
 
     .Hosting-column {
       .Hosting {
         margin-bottom: 20px;
-
-        a {
-          text-decoration: none;
-          font-weight: bold;
-          color: $grey-title;
-        }
       }
 
-      .footer-item {
-        margin-top: 10px;
-
-        a {
-          text-decoration: none;
-          color: $grey-title;
-        }
-      }
-    }
+    }*/
   }
 }
 
