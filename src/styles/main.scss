@@ -96,14 +96,17 @@ body {
   font-size: 16px;
   line-height: 19px;
 }
+
 %main_fontsize_small {
   font-size: 14px;
   line-height: 16px;
 }
+
 %main_fontsize_large {
   font-size: 20px;
   line-height: 23px;
 }
+
 %main_fontsize_xl {
   font-size: 28px;
   line-height: 33px;
@@ -188,7 +191,7 @@ main {
             div.amenities-list-container-col1,
             div.amenities-list-container-col2 {
               p {
-                @extend %main_fontsize_medium;;
+                @extend %main_fontsize_medium;
                 color: $grey-title;
                 margin-bottom: 13px;
               }
@@ -198,7 +201,7 @@ main {
           div.show-all {
             margin-bottom: 66px;
             a {
-              @extend %main_fontsize_medium;;
+              @extend %main_fontsize_medium;
               font-weight: bold;
               color: $grey-title;
               text-decoration: none;
@@ -220,7 +223,7 @@ main {
         border-radius: 3px;
 
         p {
-          @extend %main_fontsize_medium;;
+          @extend %main_fontsize_medium;
           width: 112px;
           height: 22px;
           color: $grey-title;
@@ -242,6 +245,8 @@ main {
             border: 1px solid $light-grey-border;
             box-sizing: border-box;
             border-radius: 3px;
+            @extend %main_fontsize_medium;
+            padding-left: 17px;
           }
         }
 
@@ -259,6 +264,7 @@ main {
             border-radius: 3px;
             @extend %main_fontsize_medium;
             color: $grey-title;
+            padding-left: 17px;
 
           }
         }
@@ -353,7 +359,7 @@ main {
           @extend %main_fontsize_medium;
           color: $grey-title;
           width: 491px;
-          height: 120px;
+          height: 100px;
           margin: 0;
         }
 
@@ -367,6 +373,7 @@ main {
           line-height: 22px;
           text-align: center;
           color: $light-green-title;
+          margin-bottom: 75px;
         }
       }
     }
@@ -404,7 +411,7 @@ footer {
     font-size: 16px;
     line-height: 19px;
     color: $grey-title;
-/*
+    /*
     .Airbnb-column {
       .Airbnb {
         margin-bottom: 20px;
@@ -426,9 +433,4 @@ footer {
 
     }*/
   }
-}
-
-::placeholder {
-  color: red;
-  opacity: 1;
 }
