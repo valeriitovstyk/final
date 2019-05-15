@@ -1,7 +1,42 @@
 @charset "UTF-8";
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+.host-location {
+  font-size: 14px;
+  line-height: 16px; }
+
+.details_name, .descriptive_text, .contact-host, .amenities_item, .booking_price, .apartment_type, .host-description {
+  font-size: 16px;
+  line-height: 19px; }
+
+h2, .details_date {
+  font-size: 20px;
+  line-height: 23px; }
+
+.review_hosted_font {
+  font-size: 28px;
+  line-height: 33px; }
+
+.booking_input, .booking_button {
+  width: 270px;
+  height: 50px;
+  background: white;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 19px; }
+
+.footer-column-item-title, .footer-column-title {
+  text-decoration: none;
+  color: #3d4e61; }
+
+.booking-info-block, .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
 
 @font-face {
   font-family: "Roboto";
@@ -15,28 +50,11 @@ h1 {
   src: url(../fonts/Avenir/Avenir-Book.ttf);
   /* Путь к файлу со шрифтом */ }
 
-div.main-container div.main-info-block .review-info .hosted-info p.host-location {
-  font-size: 14px;
-  line-height: 16px; }
-
-.booking_input, .booking_button, .details_name, .descriptive_text, .contact-host, .amenities_item, .booking_price, div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p, div.main-container div.main-info-block .review-info .hosted-info p.host-description {
-  font-size: 16px;
-  line-height: 19px; }
-
-h2, .details_date {
-  font-size: 20px;
-  line-height: 23px; }
-
-div.main-container div.main-info-block .review-info .hosted-info h2 {
-  font-size: 28px;
-  line-height: 33px; }
-
-.booking_input, .booking_button {
-  width: 270px;
-  height: 50px;
-  background: white;
-  border-radius: 3px; }
-
+/*
+h1 {
+  @extend %h1;
+}
+*/
 body {
   margin: 0;
   padding: 0;
@@ -236,37 +254,10 @@ button.contact-host {
   height: 29px;
   color: #3d4e61; }
 
-.booking_input {
-  border: 1px solid #e1e7ed;
-  padding-left: 17px;
-  margin-top: 60px; }
-
-.booking_button {
-  position: absolute;
-  left: 30px;
-  bottom: 38px;
-  text-align: center;
-  background: #fd5c63;
-  color: white; }
-
-.booking_price {
-  width: 112px;
-  height: 22px;
-  position: absolute; }
-
 .booking-info-block {
   position: absolute;
   right: 0;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   width: 330px;
   height: 320px;
   background: white;
@@ -276,77 +267,54 @@ button.contact-host {
   border-radius: 3px; }
 
 .booking_input_wrapper {
-  margin: 15px 30px; }
+  margin: 15px auto; }
 
-div.main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap; }
-  div.main-container div.main-info-block {
-    position: relative;
-    width: 900px;
-    height: 1265px;
-    margin: 40px auto 75px;
-    /*    div.booking-info {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 330px;
-      height: 319px;
-      background: white;
-      border: 1px solid $light-grey-border;
-      box-sizing: border-box;
-      border-radius: 3px;*/
-    /*
-      p {
-        @extend %main_fontsize_medium;
-        width: 112px;
-        height: 22px;
-        color: $grey-title;
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        margin: 0;
-      }
-    }*/ }
-    div.main-container div.main-info-block div.apartment-info p {
-      font-size: 16px;
-      line-height: 19px;
-      color: #687c94; }
-    div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres {
-      margin-top: 15px; }
-      div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p {
-        display: inline;
-        margin-right: 25px;
-        color: #3d4e61; }
-    div.main-container div.main-info-block div.apartment-info div.location p.location-text {
-      width: 492px;
-      height: 120px;
-      font-size: 16px;
-      line-height: 24px;
-      color: #3d4e61; }
-    div.main-container div.main-info-block .review-info .hosted-info h2 {
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      color: #3d4e61; }
-    div.main-container div.main-info-block .review-info .hosted-info p.host-location {
-      color: #3d4e61; }
-    div.main-container div.main-info-block .review-info .hosted-info p.host-description {
-      color: #3d4e61;
-      width: 491px;
-      height: 100px;
-      margin: 0; }
+.booking_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #e1e7ed;
+  padding-left: 17px; }
 
-.footer-column-item-title, .footer-column-title {
-  text-decoration: none;
+.booking_button {
+  text-align: center;
+  background: #fd5c63;
+  color: white; }
+
+.booking_price {
+  margin-left: 30px;
+  margin-bottom: 24px;
+  width: 112px;
+  height: 22px; }
+
+/*
+.apartment-info {
+  p {
+    @extend %main_fontsize_medium;
+    color: $light-grey-title;
+  }
+}*/
+.apartment_type {
+  display: inline;
+  margin-right: 25px;
   color: #3d4e61; }
+
+.review_hosted_font {
+  font-family: "Roboto", sans-serif; }
+
+.host-location {
+  color: #3d4e61; }
+
+.host-description {
+  color: #3d4e61;
+  width: 491px;
+  height: 100px;
+  margin: 0; }
+
+.main-info-block {
+  position: relative;
+  width: 900px;
+  height: 1265px;
+  margin: 40px auto 75px; }
 
 .footer-column-title {
   font-weight: bold; }

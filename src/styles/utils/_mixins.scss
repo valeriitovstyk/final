@@ -1,6 +1,16 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
-  }
+@mixin small_img_block($small_img_size) {
+  width: $small_img_size;
+  height: $small_img_size;
+}
+
+@mixin flex_row_between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+@mixin align_items_center {
+  justify-items: center;
+  align-items: center;
 }

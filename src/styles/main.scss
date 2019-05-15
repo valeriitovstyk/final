@@ -2,67 +2,6 @@
 @import "fonts";
 @import "typography";
 
-@font-face {
-  font-family: Avenir; /* Имя шрифта */
-  src: url(../fonts/Avenir/Avenir-Book.ttf); /* Путь к файлу со шрифтом */
-}
-
-%main_fontsize_small {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-%main_fontsize_medium {
-  font-size: 16px;
-  line-height: 19px;
-}
-
-%main_fontsize_large {
-  font-size: 20px;
-  line-height: 23px;
-}
-
-%main_fontsize_xl {
-  font-size: 28px;
-  line-height: 33px;
-}
-
-$header_small_img_size: 30px;
-$main_review_photo_size: 50px;
-$booking_block_btn_width: 270px;
-$booking_inner_padding: 30px;
-
-$grey-title: #3d4e61;
-$light-grey-title: #687c94;
-$light-green-title: #118488;
-$light-grey-border: #e1e7ed;
-$red-book-btn: #fd5c63;
-
-%booking_block {
-  width: 270px;
-  height: 50px;
-  background: white;
-  border-radius: 3px;
-  @extend %main_fontsize_medium;
-}
-
-@mixin small_img_block($small_img_size) {
-  width: $small_img_size;
-  height: $small_img_size;
-}
-
-@mixin flex_row_between {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-@mixin align_items_center {
-  justify-items: center;
-  align-items: center;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -233,37 +172,11 @@ button.contact-host {
   color: $grey-title;
 }
 
-.booking_input {
-  @extend %booking_block;
-  border: 1px solid $light-grey-border;
-  padding-left: 17px;
-  margin-top: 60px;
-}
-
-.booking_button {
-  @extend %booking_block;
-  position: absolute;
-  left: 30px;
-  bottom: 38px;
-  text-align: center;
-  background: $red-book-btn;
-  color: white;
-}
-
-.booking_price {
-  @extend %main_fontsize_medium;
-  width: 112px;
-  height: 22px;
-  position: absolute;
-}
-
 .booking-info-block {
   position: absolute;
   right: 0;
   top: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  @extend %flex_column;
   width: $booking_inner_padding * 2 + $booking_block_btn_width;
   height: 320px;
   background: white;
@@ -273,102 +186,73 @@ button.contact-host {
 }
 
 .booking_input_wrapper {
-  margin: 15px 30px;
-
+  margin: 15px auto;
 }
 
-div.main-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+.booking_input {
+  box-sizing: border-box;
+  @extend %booking_block;
+  border: 1px solid $light-grey-border;
+  padding-left: 17px;
+}
 
-  div.main-info-block {
-    position: relative;
-    width: 900px;
-    height: 1265px;
-    margin: 40px auto 75px;
+.booking_button {
+  @extend %booking_block;
+  text-align: center;
+  background: $red-book-btn;
+  color: white;
+}
 
-    div.apartment-info {
-      p {
-        font-size: 16px;
-        line-height: 19px;
-        color: $light-grey-title;
-      }
-
-      div.apartment-info-parametres {
-        margin-top: 15px;
-
-        p {
-          @extend %main_fontsize_medium;
-          display: inline;
-          margin-right: 25px;
-          color: $grey-title;
-        }
-      }
-
-      div.location {
-        p.location-text {
-          width: 492px;
-          height: 120px;
-          font-size: 16px;
-          line-height: 24px;
-          color: $grey-title;
-        }
-      }
-    }
-
-/*    div.booking-info {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 330px;
-      height: 319px;
-      background: white;
-      border: 1px solid $light-grey-border;
-      box-sizing: border-box;
-      border-radius: 3px;*/
+.booking_price {
+  @extend %main_fontsize_medium;
+  margin-left: 30px;
+  margin-bottom: 24px;
+  width: 112px;
+  height: 22px;
+}
 /*
-      p {
-        @extend %main_fontsize_medium;
-        width: 112px;
-        height: 22px;
-        color: $grey-title;
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        margin: 0;
-      }
-    }*/
-    .review-info {
-      .hosted-info {
-        h2 {
-          font-family: "Roboto", sans-serif;
-          font-style: normal;
-          font-weight: bold;
-          @extend %main_fontsize_xl;
-          color: $grey-title;
-        }
-
-        p.host-location {
-          @extend %main_fontsize_small;
-          color: $grey-title;
-        }
-
-        p.host-description {
-          @extend %main_fontsize_medium;
-          color: $grey-title;
-          width: 491px;
-          height: 100px;
-          margin: 0;
-        }
-      }
-    }
+.apartment-info {
+  p {
+    @extend %main_fontsize_medium;
+    color: $light-grey-title;
   }
+}*/
+
+.apartment_type {
+  @extend %main_fontsize_medium;
+  display: inline;
+  margin-right: 25px;
+  color: $grey-title;
 }
 
-%footer_column_link {
-  text-decoration: none;
+.review_hosted_font {
+  font-family: "Roboto", sans-serif;
+  @extend %main_fontsize_xl;
+
+}
+
+.host-location {
+  @extend %main_fontsize_small;
   color: $grey-title;
+}
+
+.host-description {
+  @extend %main_fontsize_medium;
+  color: $grey-title;
+  width: 491px;
+  height: 100px;
+  margin: 0;
+}
+
+.main-container {
+  @extend %flex_column;
+}
+
+.main-info-block {
+  position: relative;
+  width: 900px;
+  height: 1265px;
+  margin: 40px auto 75px;
 }
 
 .footer-column-item-title {
