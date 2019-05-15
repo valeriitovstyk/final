@@ -40,27 +40,6 @@ body {
   color: $grey-title;
 }
 
-a {
-  text-decoration: none;
-  color: $grey-title;
-}
-
-p.review-name {
-  @extend %main_fontsize_small;
-
-}
-
-p.review-date {
-  @extend %main_fontsize_large;
-}
-
-p.review-post {
-  @extend %main_fontsize_medium;
-  width: 491px;
-  height: 120px;
-  margin: 0;
-}
-
 .header-container {
   height: 60px;
   background: white;
@@ -134,10 +113,15 @@ p.review-post {
 }
 
 main {
-  img.Home-foto {
-    width: 100%;
-    height: 464px;
-    object-fit: cover;
+
+  a {
+    img.Home-foto {
+      width: 100%;
+      height: 464px;
+      //object-fit: none;
+      object-fit: cover;
+    }
+
   }
 
   div.main-container {
@@ -187,10 +171,12 @@ main {
         div.contact-host {
           margin-top: 5px;
           margin-bottom: 30px;
-
           a {
+            text-decoration: none;
             @extend %main_fontsize_medium;
             font-weight: bold;
+            color: $grey-title;
+
           }
         }
 
@@ -218,10 +204,12 @@ main {
 
           div.show-all {
             margin-bottom: 66px;
-
             a {
               @extend %main_fontsize_medium;
               font-weight: bold;
+              color: $grey-title;
+              text-decoration: none;
+
             }
           }
         }
@@ -305,13 +293,54 @@ main {
           color: $grey-title;
         }
 
-        .review-block {
+        .review-block1 {
           a {
             img {
               float: left;
               margin-right: 21px;
               margin-bottom: 23px;
             }
+          }
+
+          p.review-name {
+            @extend %main_fontsize_small;
+
+          }
+
+          p.review-date {
+            @extend %main_fontsize_large;
+          }
+
+          p.review-post {
+            @extend %main_fontsize_medium;
+            width: 491px;
+            height: 120px;
+            margin: 0;
+          }
+        }
+
+        .review-block2 {
+          a {
+            img {
+              float: left;
+              margin-right: 21px;
+              margin-bottom: 23px;
+            }
+          }
+
+          p.review-name {
+            @extend %main_fontsize_small;
+          }
+
+          p.review-date {
+            @extend %main_fontsize_large;
+          }
+
+          p.review-post {
+            @extend %main_fontsize_medium;
+            width: 491px;
+            height: 120px;
+            margin: 0;
           }
         }
       }

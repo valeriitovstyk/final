@@ -28,15 +28,6 @@ body {
   font-family: Avenir, sans-serif;
   color: #3d4e61; }
 
-a {
-  text-decoration: none;
-  color: #3d4e61; }
-
-p.review-post {
-  width: 491px;
-  height: 120px;
-  margin: 0; }
-
 .header-container {
   height: 60px;
   background: white;
@@ -116,16 +107,16 @@ p.review-post {
         height: 30px;
         border-radius: 50%; }
 
-p.review-post, main div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p, main div.main-container div.main-info-block div.apartment-info div.contact-host a, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col1 p,
-main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col2 p, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a, main div.main-container div.main-info-block div.booking-info p, main div.main-container div.main-info-block div.booking-info div.date input, main div.main-container div.main-info-block div.booking-info div.guests input, main div.main-container div.main-info-block div.booking-info button.book, main div.main-container div.main-info-block .hosted-info p.host-description {
+main div.main-container div.main-info-block div.apartment-info div.apartment-info-parametres p, main div.main-container div.main-info-block div.apartment-info div.contact-host a, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col1 p,
+main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container div.amenities-list-container-col2 p, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a, main div.main-container div.main-info-block div.booking-info p, main div.main-container div.main-info-block div.booking-info div.date input, main div.main-container div.main-info-block div.booking-info div.guests input, main div.main-container div.main-info-block div.booking-info button.book, main div.main-container div.main-info-block .review-info .review-block1 p.review-post, main div.main-container div.main-info-block .review-info .review-block2 p.review-post, main div.main-container div.main-info-block .hosted-info p.host-description {
   font-size: 16px;
   line-height: 19px; }
 
-p.review-name, main div.main-container div.main-info-block .hosted-info p.host-location {
+main div.main-container div.main-info-block .review-info .review-block1 p.review-name, main div.main-container div.main-info-block .review-info .review-block2 p.review-name, main div.main-container div.main-info-block .hosted-info p.host-location {
   font-size: 14px;
   line-height: 16px; }
 
-p.review-date, main div.main-container div.main-info-block div.apartment-info div.apartment-amenities h2 {
+main div.main-container div.main-info-block div.apartment-info div.apartment-amenities h2, main div.main-container div.main-info-block .review-info .review-block1 p.review-date, main div.main-container div.main-info-block .review-info .review-block2 p.review-date {
   font-size: 20px;
   line-height: 23px; }
 
@@ -133,7 +124,7 @@ main div.main-container div.main-info-block .review-info h2, main div.main-conta
   font-size: 28px;
   line-height: 33px; }
 
-main img.Home-foto {
+main a img.Home-foto {
   width: 100%;
   height: 464px;
   -o-object-fit: cover;
@@ -173,7 +164,9 @@ main div.main-container {
       margin-top: 5px;
       margin-bottom: 30px; }
       main div.main-container div.main-info-block div.apartment-info div.contact-host a {
-        font-weight: bold; }
+        text-decoration: none;
+        font-weight: bold;
+        color: #3d4e61; }
     main div.main-container div.main-info-block div.apartment-info div.apartment-amenities h2 {
       color: #3d4e61; }
     main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.amenities-list-container {
@@ -188,7 +181,9 @@ main div.main-container {
     main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all {
       margin-bottom: 66px; }
       main div.main-container div.main-info-block div.apartment-info div.apartment-amenities div.show-all a {
-        font-weight: bold; }
+        font-weight: bold;
+        color: #3d4e61;
+        text-decoration: none; }
     main div.main-container div.main-info-block div.booking-info {
       position: absolute;
       right: 0;
@@ -247,10 +242,22 @@ main div.main-container {
         color: white; }
     main div.main-container div.main-info-block .review-info h2 {
       color: #3d4e61; }
-    main div.main-container div.main-info-block .review-info .review-block a img {
+    main div.main-container div.main-info-block .review-info .review-block1 a img {
       float: left;
       margin-right: 21px;
       margin-bottom: 23px; }
+    main div.main-container div.main-info-block .review-info .review-block1 p.review-post {
+      width: 491px;
+      height: 120px;
+      margin: 0; }
+    main div.main-container div.main-info-block .review-info .review-block2 a img {
+      float: left;
+      margin-right: 21px;
+      margin-bottom: 23px; }
+    main div.main-container div.main-info-block .review-info .review-block2 p.review-post {
+      width: 491px;
+      height: 120px;
+      margin: 0; }
     main div.main-container div.main-info-block .hosted-info h2 {
       font-family: "Roboto", sans-serif;
       font-style: normal;
