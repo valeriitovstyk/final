@@ -29,12 +29,22 @@
 
 $header_small_img_size: 30px;
 $main_review_photo_size: 50px;
+$booking_block_btn_width: 270px;
+$booking_inner_padding: 30px;
 
 $grey-title: #3d4e61;
 $light-grey-title: #687c94;
 $light-green-title: #118488;
 $light-grey-border: #e1e7ed;
 $red-book-btn: #fd5c63;
+
+%booking_block {
+  width: 270px;
+  height: 50px;
+  background: white;
+  border-radius: 3px;
+  @extend %main_fontsize_medium;
+}
 
 @mixin small_img_block($small_img_size) {
   width: $small_img_size;
@@ -209,6 +219,64 @@ button.contact-host {
   @extend %main_fontsize_medium;
 }
 
+.amenities_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 352px;
+}
+
+.amenities_item {
+  width: 50%;
+  height: 29px;
+  @extend %main_fontsize_medium;
+  color: $grey-title;
+}
+
+.booking_input {
+  @extend %booking_block;
+  border: 1px solid $light-grey-border;
+  padding-left: 17px;
+  margin-top: 60px;
+}
+
+.booking_button {
+  @extend %booking_block;
+  position: absolute;
+  left: 30px;
+  bottom: 38px;
+  text-align: center;
+  background: $red-book-btn;
+  color: white;
+}
+
+.booking_price {
+  @extend %main_fontsize_medium;
+  width: 112px;
+  height: 22px;
+  position: absolute;
+}
+
+.booking-info-block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: $booking_inner_padding * 2 + $booking_block_btn_width;
+  height: 320px;
+  background: white;
+  border: 1px solid $light-grey-border;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.booking_input_wrapper {
+  margin: 15px 30px;
+
+}
+
 div.main-container {
   display: flex;
   flex-direction: column;
@@ -216,17 +284,11 @@ div.main-container {
 
   div.main-info-block {
     position: relative;
-    width: 901px;
-    height: 1266px;
-    margin: 39px auto 75px;
+    width: 900px;
+    height: 1265px;
+    margin: 40px auto 75px;
 
     div.apartment-info {
-      /*        h1 {
-                font-size: 36px;
-                line-height: 42px;
-                color: $grey-title;
-                margin-top: 0;
-              }*/
       p {
         font-size: 16px;
         line-height: 19px;
@@ -253,57 +315,9 @@ div.main-container {
           color: $grey-title;
         }
       }
-
-/*      div.contact-host {
-        margin-top: 5px;
-        margin-bottom: 30px;
-
-        a {
-          text-decoration: none;
-          @extend %main_fontsize_medium;
-          font-weight: bold;
-          color: $grey-title;
-
-        }
-      }*/
-
-      div.apartment-amenities {
-        /*          h2 {
-                    @extend %main_fontsize_large;
-                    color: $grey-title;
-                  }*/
-
-        div.amenities-list-container {
-          display: grid;
-          width: 354px;
-          grid-template-columns: repeat(2, auto);
-          grid-column-gap: 20px;
-
-          div.amenities-list-container-col1,
-          div.amenities-list-container-col2 {
-            p {
-              @extend %main_fontsize_medium;
-              color: $grey-title;
-              margin-bottom: 13px;
-            }
-          }
-        }
-
-        div.show-all {
-          margin-bottom: 66px;
-
-          a {
-            @extend %main_fontsize_medium;
-            font-weight: bold;
-            color: $grey-title;
-            text-decoration: none;
-
-          }
-        }
-      }
     }
 
-    div.booking-info {
+/*    div.booking-info {
       position: absolute;
       right: 0;
       top: 0;
@@ -312,8 +326,8 @@ div.main-container {
       background: white;
       border: 1px solid $light-grey-border;
       box-sizing: border-box;
-      border-radius: 3px;
-
+      border-radius: 3px;*/
+/*
       p {
         @extend %main_fontsize_medium;
         width: 112px;
@@ -324,117 +338,8 @@ div.main-container {
         top: 30px;
         margin: 0;
       }
-
-      div.date {
-        position: absolute;
-        left: 30px;
-        top: 91px;
-
-        input {
-          width: 270px;
-          height: 50px;
-          background: white;
-          border: 1px solid $light-grey-border;
-          box-sizing: border-box;
-          border-radius: 3px;
-          @extend %main_fontsize_medium;
-          padding-left: 17px;
-        }
-      }
-
-      div.guests {
-        position: absolute;
-        left: 30px;
-        top: 157px;
-
-        input {
-          width: 270px;
-          height: 50px;
-          background: white;
-          border: 1px solid $light-grey-border;
-          box-sizing: border-box;
-          border-radius: 3px;
-          @extend %main_fontsize_medium;
-          color: $grey-title;
-          padding-left: 17px;
-
-        }
-      }
-
-      button.book {
-        background: $red-book-btn;
-        border-radius: 4px;
-        width: 270px;
-        height: 50px;
-        position: absolute;
-        left: 30px;
-        bottom: 38px;
-        @extend %main_fontsize_medium;
-        text-align: center;
-        color: white;
-      }
-    }
-
+    }*/
     .review-info {
-      /*        h2 {
-                @extend %main_fontsize_xl;
-                color: $grey-title;
-              }*/
-      /*
-
-        .review-block1 {
-          a {
-            img {
-              float: left;
-              margin-right: 21px;
-              margin-bottom: 23px;
-            }
-          }
-
-          p.review-name {
-            @extend %main_fontsize_small;
-
-          }
-
-          p.review-date {
-            @extend %main_fontsize_large;
-          }
-
-          p.review-post {
-            @extend %main_fontsize_medium;
-            width: 491px;
-            height: 120px;
-            margin: 0;
-          }
-        }
-
-        .review-block2 {
-          a {
-            img {
-              float: left;
-              margin-right: 21px;
-              margin-bottom: 23px;
-            }
-          }
-
-          p.review-name {
-            @extend %main_fontsize_small;
-          }
-
-          p.review-date {
-            @extend %main_fontsize_large;
-          }
-
-          p.review-post {
-            @extend %main_fontsize_medium;
-            width: 491px;
-            height: 120px;
-            margin: 0;
-          }
-        }
-      }
-      */
-
       .hosted-info {
         h2 {
           font-family: "Roboto", sans-serif;
@@ -456,19 +361,6 @@ div.main-container {
           height: 100px;
           margin: 0;
         }
-
-/*        button.contact-host {
-          border: 1px solid $light-green-title;
-          box-sizing: border-box;
-          border-radius: 4px;
-          width: 150px;
-          height: 50px;
-          font-size: 16px;
-          line-height: 22px;
-          text-align: center;
-          color: $light-green-title;
-          margin-bottom: 75px;
-        }*/
       }
     }
   }
