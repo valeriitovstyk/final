@@ -64,6 +64,14 @@
 
         <div class="apartment-amenities">
           <h2>Amenities</h2>
+
+          <div class="amenities_container">
+            <div class="amenities_item">Elevator</div>
+            <div class="amenities_item">Washer</div>
+            <div class="amenities_item">Hair dryer</div>
+            <div class="amenities_item">Kitchen</div>
+          </div>
+<!--
           <div class="amenities-list-container">
             <div class="amenities-list-container-col1">
               <p>Elevator</p>
@@ -73,22 +81,24 @@
               <p>Hair dryer</p>
               <p>Kitchen</p>
             </div>
-          </div>
+          </div>-->
+
           <div class="show-all"><a href="#">Show All Amenities</a></div>
         </div>
       </div>
 
-      <div class="booking-info">
-        <p>25$ per night</p>
-        <div class="date">
-          <input type="text" name="date" id="date" placeholder="Date">
+      <div class="booking-info-block booking_margin">
+        <div class="booking_price booking_input_wrapper">25$ per night</div>
+        <div class="booking_input_wrapper booking_margin">
+          <input type="text" name="date" id="date" placeholder="Date" class="booking_input">
         </div>
-        <div class="guests">
-          <input type="number" name="guests" id="guests" placeholder="Guests">
+        <div class="booking_input_wrapper booking_margin">
+          <input type="number" name="guests" id="guests" placeholder="Guests"  class="booking_input">
         </div>
-        <button class="book">Book</button>
-
+        <button class="booking_button">Book</button>
       </div>
+
+
       <div class="review-info">
         <h2 class="is-bold">Reviews</h2>
 <!--        <div class="review-block1">
@@ -151,15 +161,13 @@
         </div>
 
       </div>
-
-
       <div class="hosted-info">
         <h2>Hosted by Jane</h2>
         <p class="host-location">Budapest, Hungary</p>
-        <p class="host-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et magna aliqua.</p>
-        <button class="contact-host">Contact Host</button>
+        <div class="descriptive_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et magna aliqua.</div>
       </div>
+        <button class="contact-host">Contact Host</button>
     </div>
   </div>
 </main>
