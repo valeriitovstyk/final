@@ -32,6 +32,84 @@ a {
   font-weight: bold;
 }
 
+.descriptive_text {
+  @extend %main_fontsize_medium;
+  width: 491px;
+  height: 120px;
+  color: $grey-title;
+}
+
+.header-container {
+  height: 60px;
+  background: white;
+  @include flex_row_between;
+  @include align_items_center;
+}
+
+.header-left {
+  padding-left: 26px;
+}
+
+.header-small-logo-img {
+  @include small_img_block($header_small_img_size);
+}
+
+.header-right {
+  margin-right: 19px;
+  @include flex_row_between;
+}
+
+.header-nav-wrapper {
+  @include flex_row_between;
+  @include align_items_center;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey-title;
+  margin-right: 30px;
+}
+
+.header_nav_link {
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey-title;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.header-logo {
+  @include small_img_block($header_small_img_size);
+  border-radius: 50%;
+}
+
+.header-profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.main-container {
+  @extend %flex_column;
+}
+
+.main-info-block {
+  position: relative;
+  width: 900px;
+  height: 1265px;
+  margin: 40px auto 75px;
+}
+
+.main_photo {
+  width: 100%;
+  height: 464px;
+  object-fit: cover;
+}
+
 .review {
   display: flex;
   width: 491px;
@@ -69,71 +147,6 @@ a {
 .details_date {
   @extend %main_fontsize_large;
   font-weight: 500;
-}
-
-.descriptive_text {
-  @extend %main_fontsize_medium;
-  width: 491px;
-  height: 120px;
-  color: $grey-title;
-}
-
-.header-container {
-  height: 60px;
-  background: white;
-  @include flex_row_between;
-  @include align_items_center;
-
-  .header-left {
-    padding-left: 26px;
-
-    .header-small-logo-img {
-      @include small_img_block($header_small_img_size);
-    }
-  }
-
-  .header-right {
-    margin-right: 19px;
-    @include flex_row_between;
-
-    .header-nav-wrapper {
-      @include flex_row_between;
-      @include align_items_center;
-
-      .nav-wrap {
-        .nav-item {
-          list-style: none;
-          text-decoration: none;
-          display: inline;
-
-          a {
-            font-size: 16px;
-            line-height: 22px;
-            color: $grey-title;
-            text-decoration: none;
-            margin-right: 30px;
-          }
-        }
-      }
-    }
-
-    .header-profile-wrapper {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-
-      .header-logo {
-        @include small_img_block($header_small_img_size);
-        border-radius: 50%;
-      }
-    }
-  }
-}
-
-.main_photo {
-  width: 100%;
-  height: 464px;
-  object-fit: cover;
 }
 
 button.contact-host {
@@ -210,13 +223,6 @@ button.contact-host {
   width: 112px;
   height: 22px;
 }
-/*
-.apartment-info {
-  p {
-    @extend %main_fontsize_medium;
-    color: $light-grey-title;
-  }
-}*/
 
 .apartment_type {
   @extend %main_fontsize_medium;
@@ -243,19 +249,20 @@ button.contact-host {
   margin: 0;
 }
 
-.main-container {
-  @extend %flex_column;
+footer {
+  background: white;
+  box-shadow: 0 -1px 0 $light-grey-border;
+  display: flex;
 }
 
-.main-info-block {
-  position: relative;
-  width: 900px;
-  height: 1265px;
-  margin: 40px auto 75px;
-}
-
-.footer-column-item-title {
-  @extend %footer_column_link;
+.footer-container {
+  margin: 44px auto;
+  display: grid;
+  width: 901px;
+  grid-template-columns: repeat(3, auto);
+  font-size: 16px;
+  line-height: 19px;
+  color: $grey-title;
 }
 
 .footer-column-title {
@@ -263,22 +270,10 @@ button.contact-host {
   font-weight: bold;
 }
 
-.footer-item {
-  margin-top: 10px;
+.footer-column-item-title {
+  @extend %footer_column_link;
 }
 
-footer {
-  background: white;
-  box-shadow: 0 -1px 0 $light-grey-border;
-  display: flex;
-
-  .footer-container {
-    margin: 44px auto;
-    display: grid;
-    width: 901px;
-    grid-template-columns: repeat(3, auto);
-    font-size: 16px;
-    line-height: 19px;
-    color: $grey-title;
-  }
+.footer-item {
+  margin-top: 10px;
 }
