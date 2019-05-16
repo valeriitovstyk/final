@@ -7,11 +7,11 @@
   font-size: 16px;
   line-height: 19px; }
 
-h2, .details_date {
+.details_date, .apartment-amenities > h2 {
   font-size: 20px;
   line-height: 23px; }
 
-.review_hosted_font {
+h2, .review_hosted_font {
   font-size: 28px;
   line-height: 33px; }
 
@@ -55,6 +55,12 @@ h1 {
   @extend %h1;
 }
 */
+@font-face {
+  font-family: Avenir;
+  /* Имя шрифта */
+  src: url(../fonts/Avenir/Avenir-Book.ttf);
+  /* Путь к файлу со шрифтом */ }
+
 body {
   margin: 0;
   padding: 0;
@@ -246,14 +252,14 @@ button.contact-host {
   line-height: 22px;
   text-align: center;
   color: #118488;
-  margin-bottom: 75px;
   position: absolute;
   left: 0;
   bottom: 0; }
 
 .contact-host {
-  margin-top: 5px;
-  margin-bottom: 30px; }
+  width: 176px;
+  height: 29px;
+  margin-top: 5px; }
 
 .amenities_container {
   display: -webkit-box;
@@ -265,12 +271,19 @@ button.contact-host {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 352px; }
+  width: 352px;
+  margin-top: 21px;
+  margin-bottom: 13px; }
 
 .amenities_item {
   width: 50%;
   height: 29px;
   color: #3d4e61; }
+
+.show-all {
+  width: 176px;
+  height: 29px;
+  margin-bottom: 66px; }
 
 .booking-info-block {
   position: absolute;
@@ -284,33 +297,58 @@ button.contact-host {
           box-sizing: border-box;
   border-radius: 3px; }
 
-.booking_input_wrapper {
-  margin: 15px auto; }
-
 .booking_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #e1e7ed;
   padding-left: 17px; }
 
+#date {
+  position: absolute;
+  left: 30px;
+  bottom: 178px; }
+
+#guests {
+  position: absolute;
+  left: 30px;
+  bottom: 112px; }
+
 .booking_button {
   text-align: center;
   background: #fd5c63;
-  color: white; }
+  color: white;
+  position: absolute;
+  bottom: 38px;
+  left: 30px; }
 
 .booking_price {
-  margin-left: 30px;
-  margin-bottom: 24px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
   width: 112px;
   height: 22px; }
 
 .apartment_type {
+  width: 176px;
+  height: 29px;
+  color: #687c94; }
+
+.apartment-info-parametres {
+  margin-top: 15px; }
+
+.apartment-info-parametres > div {
   display: inline;
-  margin-right: 25px;
+  height: 29px;
   color: #3d4e61; }
 
+.apartment_location {
+  width: 491px;
+  height: 120px;
+  margin-top: 28px; }
+
 .review_hosted_font {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  margin-top: 14px; }
 
 .host-location {
   color: #3d4e61; }
