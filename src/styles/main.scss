@@ -2,6 +2,11 @@
 @import "fonts";
 @import "typography";
 
+@font-face {
+  font-family: Avenir; /* Имя шрифта */
+  src: url(../fonts/Avenir/Avenir-Book.ttf); /* Путь к файлу со шрифтом */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +24,7 @@ h1 {
 }
 
 h2 {
-  @extend %main_fontsize_large;
+  @extend %main_fontsize_xl;
   color: $grey-title;
 }
 
@@ -159,16 +164,22 @@ button.contact-host {
   line-height: 22px;
   text-align: center;
   color: $light-green-title;
-  margin-bottom: 75px;
+  // margin-bottom: 75px;
   position: absolute;
   left: 0;
   bottom: 0;
 }
 
 .contact-host {
+  width: 176px;
+  height: 29px;
   margin-top: 5px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   @extend %main_fontsize_medium;
+}
+
+.apartment-amenities > h2 {
+  @extend %main_fontsize_large;
 }
 
 .amenities_container {
@@ -176,6 +187,8 @@ button.contact-host {
   flex-direction: row;
   flex-wrap: wrap;
   width: 352px;
+  margin-top: 21px;
+  margin-bottom: 13px;
 }
 
 .amenities_item {
@@ -183,6 +196,12 @@ button.contact-host {
   height: 29px;
   @extend %main_fontsize_medium;
   color: $grey-title;
+}
+
+.show-all {
+  width: 176px;
+  height: 29px;
+  margin-bottom: 66px;
 }
 
 .booking-info-block {
@@ -199,7 +218,7 @@ button.contact-host {
 }
 
 .booking_input_wrapper {
-  margin: 15px auto;
+  // margin: 15px auto;
 }
 
 .booking_input {
@@ -209,31 +228,70 @@ button.contact-host {
   padding-left: 17px;
 }
 
+#date {
+  position: absolute;
+  left: 30px;
+  bottom: 178px;
+}
+
+#guests {
+  position: absolute;
+  left: 30px;
+  bottom: 112px;
+}
+
 .booking_button {
   @extend %booking_block;
   text-align: center;
   background: $red-book-btn;
   color: white;
+  position: absolute;
+  bottom: 38px;
+  left: 30px;
 }
 
 .booking_price {
   @extend %main_fontsize_medium;
-  margin-left: 30px;
-  margin-bottom: 24px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  // margin-left: 30px;
+  // margin-top: 30px;
+  // margin-bottom: 24px;
   width: 112px;
   height: 22px;
 }
 
 .apartment_type {
   @extend %main_fontsize_medium;
+  width: 176px;
+  height: 29px;
+  color: $light-grey-title;
+}
+
+.apartment-info-parametres {
+  margin-top: 15px;
+}
+
+.apartment-info-parametres > div {
   display: inline;
-  margin-right: 25px;
+  // margin-top: 15px;
+  height: 29px;
   color: $grey-title;
+
+}
+
+.apartment_location {
+  width: 491px;
+  height: 120px;
+  margin-top: 28px;
+
 }
 
 .review_hosted_font {
   font-family: "Roboto", sans-serif;
   @extend %main_fontsize_xl;
+  margin-top: 14px;
 }
 
 .host-location {
