@@ -3,8 +3,8 @@
 @import "typography";
 
 @font-face {
-  font-family: Avenir; /* Имя шрифта */
-  src: url(../fonts/Avenir/Avenir-Book.ttf); /* Путь к файлу со шрифтом */
+  font-family: Avenir;
+  src: url(../fonts/Avenir/Avenir-Book.ttf);
 }
 
 body {
@@ -47,8 +47,8 @@ a {
 .header-container {
   height: 60px;
   background: white;
-  @include flex_row_between;
-  @include align_items_center;
+  @extend flex_row_between;
+  @extend align_items_center;
 }
 
 .header-left {
@@ -61,12 +61,12 @@ a {
 
 .header-right {
   margin-right: 19px;
-  @include flex_row_between;
+  @extend flex_row_between;
 }
 
 .header-nav-wrapper {
-  @include flex_row_between;
-  @include align_items_center;
+  @extend flex_row_between;
+  @extend align_items_center;
 }
 
 .nav-item {
@@ -164,7 +164,6 @@ button.contact-host {
   line-height: 22px;
   text-align: center;
   color: $light-green-title;
-  // margin-bottom: 75px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -174,7 +173,6 @@ button.contact-host {
   width: 176px;
   height: 29px;
   margin-top: 5px;
-  // margin-bottom: 30px;
   @extend %main_fontsize_medium;
 }
 
@@ -217,10 +215,6 @@ button.contact-host {
   border-radius: 3px;
 }
 
-.booking_input_wrapper {
-  // margin: 15px auto;
-}
-
 .booking_input {
   box-sizing: border-box;
   @extend %booking_block;
@@ -255,9 +249,6 @@ button.contact-host {
   position: absolute;
   left: 30px;
   top: 30px;
-  // margin-left: 30px;
-  // margin-top: 30px;
-  // margin-bottom: 24px;
   width: 112px;
   height: 22px;
 }
@@ -275,7 +266,6 @@ button.contact-host {
 
 .apartment-info-parametres > div {
   display: inline;
-  // margin-top: 15px;
   height: 29px;
   color: $grey-title;
 

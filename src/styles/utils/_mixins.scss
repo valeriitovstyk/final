@@ -2,15 +2,3 @@
   width: $small_img_size;
   height: $small_img_size;
 }
-
-@mixin flex_row_between {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-@mixin align_items_center {
-  justify-items: center;
-  align-items: center;
-}

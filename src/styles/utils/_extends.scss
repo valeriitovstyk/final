@@ -37,3 +37,15 @@
   flex-direction: column;
   flex-wrap: nowrap;
 }
+
+%flex_row_between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+%align_items_center {
+  justify-items: center;
+  align-items: center;
+}
